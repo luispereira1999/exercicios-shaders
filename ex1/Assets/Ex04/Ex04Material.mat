@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex4Material
+  m_Name: Ex04Material
   m_Shader: {fileID: 4800000, guid: c2ebd7e51d2eaaa41847e70f88b75fe9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -72,8 +72,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intesidade: 1
-    - _LimiteBuild: 0
+    - _Intesidade: -1
+    - _LimiteBuild: -2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -85,8 +85,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.60784316, b: 0, a: 1}
-    - _Cor: {r: 0.5754717, g: 0.20346867, b: 0.04071733, a: 1}
-    - _Cor2: {r: 1, g: 0.07738851, b: 0, a: 0}
+    - _Cor: {r: 0.94716984, g: 0.03395501, b: 0.45826823, a: 0}
+    - _Cor2: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 0.8726415, g: 0.63517517, b: 0.23050906, a: 0}
     - _MainCor: {r: 0.8396226, g: 0.65526205, b: 0.31287822, a: 1}

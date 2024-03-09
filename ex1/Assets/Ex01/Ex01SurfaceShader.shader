@@ -1,5 +1,5 @@
 //     "PASTA /NOME_DO_SHADER  "
-Shader "Custom/Ex1SurfaceShader"
+Shader "Custom/Ex01SurfaceShader"
 {
     Properties
     {

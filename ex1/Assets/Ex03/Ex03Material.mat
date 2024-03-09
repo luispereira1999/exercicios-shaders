@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex1Material
-  m_Shader: {fileID: 4800000, guid: 24f3b200e11dea64bb1d0cbd8c2e5fdc, type: 3}
+  m_Name: Ex03Material
+  m_Shader: {fileID: 4800000, guid: e4ba69e3856884c45a4d50592e8e694d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -61,36 +61,28 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 1
+    - _Build: 10
+    - _BuildPercent: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionOn: 0
-    - _EmissionToggle: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensidade: 1.08
-    - _Intensity: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ScreenPos: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.2264151, g: 1, b: 0.2563828, a: 0}
-    - _Color2: {r: 0.22745098, g: 1, b: 0.25490198, a: 0}
-    - _Cor: {r: 0, g: 0.25313067, b: 1, a: 0}
-    - _Cor2: {r: 1, g: 0.6084906, b: 0.6084906, a: 0}
-    - _EColor: {r: 1, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0.20613028, g: 0.5745631, b: 0.83396226, a: 1}
-    - _GeneralColor: {r: 0, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 0.60784316, b: 0, a: 1}
+    - _Cor: {r: 0.9339623, g: 0.7940358, b: 0.4273318, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 0.8726415, g: 0.63517517, b: 0.23050906, a: 0}
+    - _MainCor: {r: 0.8396226, g: 0.65526205, b: 0.31287822, a: 1}
   m_BuildTextureStacks: []

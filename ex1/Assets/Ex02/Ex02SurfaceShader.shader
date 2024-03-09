@@ -1,4 +1,4 @@
-Shader "Custom/Ex2SurfaceShader"
+Shader "Custom/Ex02SurfaceShader"
 {
     Properties
     {

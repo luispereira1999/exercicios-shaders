@@ -1,11 +1,11 @@
-Shader "Custom/Ex4SurfaceShader"
+Shader "Custom/Ex04SurfaceShader"
 {
     Properties
     {  
         _Cor ("Cor geral (Albedo)", Color) = (0,0,0,0)
         _Cor2 ("Emissao", Color) = (0,0,0,0)
         _Intesidade ("intensidade", Range (-1, 7)) = 1
-        _LimiteBuild ("build", Range (-1, 1.3)) = 1
+        _LimiteBuild ("build", Range (-2, 2)) = 1
         [Toggle] _EmissionON ("Emission on", Int) = 1
     }
     SubShader
@@ -20,7 +20,7 @@ Shader "Custom/Ex4SurfaceShader"
             float2 uvMainTex;
             float3 screenPos;
             float3 worldPos;
-            float3 viewDir;
+            float3 viewDir;     // direção da câmara
         };
 
         half3 _Cor;
@@ -46,28 +46,12 @@ Shader "Custom/Ex4SurfaceShader"
             // else
             // {
             //     o.Albedo *= max(0.2, _LimiteBuild * 0.75);
-            // }
+            // }    
 
 
             // efeito de desaparecer/aparecer na parte do shader que falta construir - versão 2
-            o.Albedo = _Cor;
+            // o.Albedo = _Cor;
 
-            if (IN.worldPos.y < _LimiteBuild)
-            {
-                o.Alpha = 1;
-            }
-            else
-            {
-                o.Alpha = 0.3;
-                o.Emission = float3(0, 0, rsqrt(IN.worldPos.y) * _Intesidade);
-                
-                // reage à direção da luz
-                // o.Emission = float3(dot(normalize(IN.worldPos), _WorldSpaceLightPos0), 0, 0);
-                // o.Emission = float3(dot(normalize(IN.worldPos), normalize(_LightColor0)), _LightColor0.y, 0);
-            }
-
-
-            // efeito de desaparecer/aparecer na parte do shader que falta construir - versão 2
             // if (IN.worldPos.y < _LimiteBuild)
             // {
             //     o.Alpha = 1;
@@ -75,9 +59,29 @@ Shader "Custom/Ex4SurfaceShader"
             // else
             // {
             //     o.Alpha = 0.3;
-            //     // o.Emission = clamp(IN.worldPos, IN.viewDir, _SinTime.y);
-            //     o.Emission = dot(IN.worldPos, IN.viewDir);
+            //     o.Emission = float3(0, 0, rsqrt(IN.worldPos.y) * _Intesidade);
+                
+                // reage à direção da luz
+                // o.Emission = float3(dot(normalize(IN.worldPos), _WorldSpaceLightPos0), 0, 0);
+                // o.Emission = float3(dot(normalize(IN.worldPos), normalize(_LightColor0)), _LightColor0.y, 0);
             // }
+            
+
+            // efeito de desaparecer/aparecer na parte do shader que falta construir - versão 3
+            o.Albedo = _Cor;
+            
+            if (IN.worldPos.y < _LimiteBuild)
+            {
+                o.Alpha = 1;
+            }
+            else
+            {
+                o.Alpha = 0.3;
+                // clamp retorna um valor entre um valor mínimo e máximo
+                // o.Emission = clamp(IN.viewDir, IN.worldPos, _SinTime.y);
+                // dot retorna o produto escalar 
+                o.Emission = dot(IN.worldPos, IN.viewDir);
+            }
         }
 
         ENDCG
