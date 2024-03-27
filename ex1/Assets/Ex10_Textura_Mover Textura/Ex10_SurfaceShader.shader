@@ -10,6 +10,7 @@ Shader "Custom/Ex10_SurfaceShader"
     SubShader
     {
         Tags { "RenderType" = "Opaque" }
+
         LOD 200
 
         Cull off
