@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ex08_Material
-  m_Shader: {fileID: 4800000, guid: f4315178816e1194c86b80cabfa6861a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 299be7f0af0d1664aafaeb8d017b70ba, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -95,6 +95,18 @@ Material:
         m_Texture: {fileID: 2800000, guid: f2f64eb7805c01c4ba27080de188c40c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _texture:
+        m_Texture: {fileID: 2800000, guid: 46b88b610e216aa41b255e9737bfbb81, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texture_2:
+        m_Texture: {fileID: 2800000, guid: e116e8248f78a024aa8a137363e0e1f9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texture_3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
@@ -114,7 +126,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - _intensity: 2
-    - _range: 0
+    - _range: 0.311
     - _slider1: 2.14
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

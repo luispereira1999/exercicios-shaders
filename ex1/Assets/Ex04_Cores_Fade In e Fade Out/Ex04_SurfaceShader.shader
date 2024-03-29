@@ -20,7 +20,7 @@ Shader "Custom/Ex04_SurfaceShader"
             float2 uvMainTex;
             float3 screenPos;
             float3 worldPos;
-            float3 viewDir;     // direção da câmara
+            float3 viewDir;  // direção da câmara
         };
 
         half3 _Cor;
