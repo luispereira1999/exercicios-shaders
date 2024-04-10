@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ex14_Material
-  m_Shader: {fileID: 4800000, guid: 9db0fbffa5fa13b488bc675b8b7915bf, type: 3}
+  m_Shader: {fileID: 4800000, guid: f23d351742539d244a0b9c59cae0b70f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
