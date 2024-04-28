@@ -17,8 +17,8 @@ Shader "Custom/Ex01_SurfaceShader"
         Tags { "Queue" = "Transparent" }
 
         // desativa o culling de faces,
-        // por outras palavras, renderiza por fora e por dentro
-        cull off
+        // ou seja, renderiza por fora e por dentro
+        Cull off
 
         // indica que o código será escrito em C for Graphics
         CGPROGRAM
