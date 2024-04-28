@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex16_Material
-  m_Shader: {fileID: 4800000, guid: de065825a7026834fb06bccd3e26bbdf, type: 3}
+  m_Name: Ex18_MyToonMaterial
+  m_Shader: {fileID: 4800000, guid: c6b37a984a56c4c4ab11845289342f7b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f94651e8a162b604f9b24c4d77a77964, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
@@ -63,6 +63,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 2800000, guid: f94651e8a162b604f9b24c4d77a77964, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TexturaPrincipal:
         m_Texture: {fileID: 2800000, guid: f2f64eb7805c01c4ba27080de188c40c, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -76,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _main_texture:
-        m_Texture: {fileID: 2800000, guid: 5f8b222e08df3e34fbfc3455abfb61be, type: 3}
+        m_Texture: {fileID: 2800000, guid: f94651e8a162b604f9b24c4d77a77964, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _nainTexture:
@@ -138,7 +142,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _color: {r: 0, g: 0.33255434, b: 1, a: 1}
+    - _color: {r: 1, g: 1, b: 1, a: 1}
     - _color_2: {r: 1, g: 0.32756364, b: 0, a: 0}
     - _color_3: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

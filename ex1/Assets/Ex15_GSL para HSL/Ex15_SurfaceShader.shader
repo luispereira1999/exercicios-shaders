@@ -32,35 +32,51 @@ Shader "Custom/Ex15_SurfaceShader"
             float3 viewDir;
         };
 
-        // 1 - 
+        // 1 e 2
         fixed3 _color;
+
+        // 3
         fixed _range;
 
-        // 2 - 
+        // 4
         fixed3 _color_2;
 
-        // 3 - 
+        // 5 
         fixed3 _color_3;
         float _main;
         float _adjust;
 
-        float randomJose(float2 _st) {
+        // função em GLSL
+        // float randomJoseGLSL(in vec2 _st) {
+            // return fract(sin(dot(_st.xy, vec2(12.9898, 78.233))) * 43758.473);
+        // }
+
+        // função em HLSL
+        float randomJoseHLSL(float2 _st) {
             return frac(sin(dot(_st.xy, float2(12.9898, 78.233))) * 43758.473);
         }
 
         void surf(Input IN, inout SurfaceOutput o)
         {
-            // 1 - 
-            // o.Albedo = float3(randomJose(float2(IN.worldPos.x, _SinTime.x)), IN.worldPos.x, _range);
+            // 1
+            // o.Albedo = randomJoseHLSL(_color);
 
 
-            // 2 - 
+            // 2
+            // o.Albedo = float3(randomJoseHLSL(_color.xy), randomJoseHLSL(_color.yx), randomJoseHLSL(_color.xz));
+
+
+            // 3
+            // o.Albedo = float3(randomJoseHLSL(float2(IN.worldPos.x, _SinTime.x)), IN.worldPos.x, _range);
+
+
+            // 4
             // o.Albedo = dot(o.Normal, normalize( IN.viewDir)) > 0.5 ? _color : _color_2;
 
 
-            // 3 - 
+            // 5
             o.Albedo = dot(o.Normal, normalize( IN.viewDir)) > _main? _color : 
-                       dot(o.Normal, normalize( IN.viewDir)) > (_main - _adjust)? _color_2 : _color_3;
+                       dot(o.Normal, normalize( IN.viewDir)) > (_main - _adjust) ? _color_2 : _color_3;
         }
 
         ENDCG
