@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class IsPlayerNear : MonoBehaviour
+public class Ex10_IsPlayerNear_Controller : MonoBehaviour
 {
     public Transform player;
 

@@ -2,33 +2,35 @@ Shader "Custom/Ex21_Wall_SurfaceShader"
 {
     Properties
     {
-        _main_texture ("Main Texture", 2D) = "defaulttexture" {}
+        _texture ("Main Texture", 2D) = "defaulttexture" {}
     }
     SubShader
     {
-        Tags { "Queue" = "Transparent" }
+        Cull off
 
-        // Cull off  // renderiza por fora e por dentro
-        // Cull back  // o mesmo que não estar definido, ou seja, por padrão
-        Cull front  // renderiza a parte de dentro
+        // diz quais canais de cor serão afetados/permitidos
+        ColorMask RG
 
-        Blend SrcAlpha OneMinusSrcAlpha
+        Stencil {
+            Ref 1  // referência dentro do stencil
+            Comp notequal  // comparação diferente
+            Pass keep  // mantém o que estiver no stencil
+        }
 
         CGPROGRAM
-        #pragma surface surf Lambert alpha
+        #pragma surface surf Lambert
 
         struct Input
         {
-            float2 uv_main_texture;
+            float2 uv_texture;
         };
 
-        sampler2D _main_texture;
+        sampler2D _texture;
 
         void surf(Input IN, inout SurfaceOutput o)
         {
-            float4 base = tex2D(_main_texture, IN.uv_main_texture);
-            o.Albedo = base.rgb;
-            o.Alpha = base.a;
+            float3 base = tex2D(_texture, IN.uv_texture);
+            o.Albedo = base;
         }
 
         ENDCG

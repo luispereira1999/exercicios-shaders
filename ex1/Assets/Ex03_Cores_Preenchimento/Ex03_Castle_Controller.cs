@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CastleController : MonoBehaviour
+public class Ex03_Castle_Controller : MonoBehaviour
 {
     private float _currentBuildPercent = 0f;
     private AudioSource _audioSource;

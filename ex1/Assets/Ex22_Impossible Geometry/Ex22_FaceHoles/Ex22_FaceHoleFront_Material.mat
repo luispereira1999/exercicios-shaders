@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex21_Wall_Material
-  m_Shader: {fileID: 4800000, guid: ba7121d79b0d45442b1e30ab3338c7e4, type: 3}
+  m_Name: Ex22_FaceHoleFront_Material
+  m_Shader: {fileID: 4800000, guid: 97d6c886ed456d246b0469672371737e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -100,7 +100,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texture:
-        m_Texture: {fileID: 2800000, guid: 1e5b4c12fcf22b248969629ba1ad08e0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _third_texture:

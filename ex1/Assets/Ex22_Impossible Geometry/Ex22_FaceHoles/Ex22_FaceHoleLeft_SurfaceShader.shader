@@ -1,4 +1,4 @@
-Shader "Custom/Ex21_Hole_SurfaceShader"
+Shader "Custom/Ex22_FaceHoleLeft_SurfaceShader"
 {
     Properties
     {
@@ -9,7 +9,7 @@ Shader "Custom/Ex21_Hole_SurfaceShader"
         Cull off
 
         Stencil {
-            Ref 1  // referência dentro do stencil
+            Ref 2  // referência dentro do stencil
             Comp always  // diz como deve ser feita a comparação quando entra no buffer
                          // e always diz para fazer sempre a comparação
             Pass replace  // substitui o que estiver no stencil

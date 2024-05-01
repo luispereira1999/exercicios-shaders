@@ -1,4 +1,4 @@
-Shader "Custom/Ex21_Hole_SurfaceShader"
+Shader "Custom/Ex22_Apple_SurfaceShader"
 {
     Properties
     {
@@ -9,15 +9,11 @@ Shader "Custom/Ex21_Hole_SurfaceShader"
         Cull off
 
         Stencil {
-            Ref 1  // referência dentro do stencil
-            Comp always  // diz como deve ser feita a comparação quando entra no buffer
-                         // e always diz para fazer sempre a comparação
-            Pass replace  // substitui o que estiver no stencil
-                          // (o que deve ser feito se a comparação passar)
+            Ref 1
         }
 
         CGPROGRAM
-        #pragma surface surf Lambert alpha
+        #pragma surface surf Lambert
 
         struct Input
         {
