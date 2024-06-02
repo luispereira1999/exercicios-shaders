@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: a5e08342b961323439e756967d05c84c, type: 3}
+  m_Name: Ex23_GrabPass_Material
+  m_Shader: {fileID: 4800000, guid: fd5e90f6e1477d14ab22a49b6f794e45, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

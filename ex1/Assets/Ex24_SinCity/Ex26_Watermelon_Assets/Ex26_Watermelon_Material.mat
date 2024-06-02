@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: first
-  m_Shader: {fileID: 4800000, guid: 1efd66be2ac0dcc4db0cb1dd3d9d9440, type: 3}
+  m_Name: Ex26_Watermelon_Material
+  m_Shader: {fileID: 4800000, guid: 120b6d376aa67cc4aaf1f5055045a6c7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -43,8 +43,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Interior:
+        m_Texture: {fileID: 2800000, guid: 71a60f07a3f399148aede61a9bee28ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6138ab3bd52fb474d8027ebae1b598f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -72,16 +76,13 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Slider: -0.109
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _limte: 2.77
     m_Colors:
-    - Cor: {r: 0.13226032, g: 0.4811321, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Cor: {r: 0.9716981, g: 0.44446346, b: 0, a: 0}
-    - _Cor2: {r: 0, g: 0.9716981, b: 0.42608863, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

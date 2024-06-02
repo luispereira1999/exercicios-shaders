@@ -1,4 +1,4 @@
-Shader "Custom/Ex25_SurfaceShader"
+Shader "Custom/Ex23_GrabPass_SurfaceShader  "
 {
     Properties
     {
@@ -6,10 +6,11 @@ Shader "Custom/Ex25_SurfaceShader"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        LOD 100
-        GrabPass{}
+        Tags { "RenderType" = "Opaque" }
 
+        LOD 200
+
+        GrabPass{}
 
         Pass
         {
@@ -28,9 +29,8 @@ Shader "Custom/Ex25_SurfaceShader"
 
             struct v2f
             {
-                float2 uv : TEXCOORD0;
-          
                 float4 vertex : SV_POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             sampler2D _MainTex;
@@ -42,6 +42,7 @@ Shader "Custom/Ex25_SurfaceShader"
             v2f vert (appdata v)
             {
                 v2f o;
+
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _GrabTexture);
             
@@ -50,13 +51,17 @@ Shader "Custom/Ex25_SurfaceShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
+                // textura
                 fixed4 col = tex2D(_GrabTexture, i.uv);
                 
                 // 1 - inverter cores
                 // col = 1 - col;
 
-                // 2 - preto e branco
+                // 2 - cores a preto e branco
                 col.xyz = float3((col.r + col.g + col.b) / 3, (col.r + col.g + col.b) / 3, (col.r + col.g + col.b) / 3);
+                
+                // 3 - tudo a vermelho
+                col.xyz = float3(col.r, 0, 0);
 
                 return col;
             }
