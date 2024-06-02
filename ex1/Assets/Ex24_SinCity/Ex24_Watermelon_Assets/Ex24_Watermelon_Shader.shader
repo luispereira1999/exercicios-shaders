@@ -1,4 +1,4 @@
-Shader "Unlit/doMetlancia"
+Shader "Custom/Ex24_Watermelon_Shader"
 {
     Properties
     {

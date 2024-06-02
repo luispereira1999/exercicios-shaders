@@ -1,4 +1,4 @@
-Shader "Custom/Ex26_Orange_Shader"
+Shader "Custom/Ex24_Orange_Shader"
 {
     Properties
     {  
