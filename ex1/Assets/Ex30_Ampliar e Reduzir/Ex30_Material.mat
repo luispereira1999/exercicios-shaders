@@ -7,12 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex26_PostProcessing_Material
-  m_Shader: {fileID: 4800000, guid: ac914300ec64c5e47af7e3fa02699c21, type: 3}
+  m_Name: Ex30_Material
+  m_Shader: {fileID: 4800000, guid: e8a302f3e0e90c242a65fe814aaab6ff, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _ROTATIONSIDE_X
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -72,17 +73,23 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _RotationSide: 0
+    - _Side: 150
+    - _Side_square: 100
     - _Slider: 60
-    - _Slider_rotation: 0
-    - _Slider_side: 170
-    - _Slider_x: 296
+    - _SliderAngles: 0
+    - _Slider_rotation: 3.21
+    - _Slider_side: 136
+    - _Slider_x: 15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _StretchFactor: 1.5
+    - _Stretch_factor: 1.5
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 503.00003, g: 276.75, b: 0, a: 0}
+    - _Center: {r: 524, g: 228.75, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

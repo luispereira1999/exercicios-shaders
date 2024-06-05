@@ -1,16 +1,15 @@
-Shader "Custom/Ex23_GrabPass_UnlitShader"
+Shader "Unlit/ComplexWaveShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Frequency ("Frequency", Range(0,10)) = 1
+        _Amplitude ("Amplitude", Range(0,1)) = 0.1
     }
     SubShader
     {
-        Tags { "RenderType" = "Opaque" }
-
-        LOD 200
-
-        GrabPass{}
+        Tags { "RenderType"="Opaque" }
+        LOD 100
 
         Pass
         {
@@ -28,40 +27,31 @@ Shader "Custom/Ex23_GrabPass_UnlitShader"
 
             struct v2f
             {
-                float4 vertex : SV_POSITION;
                 float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
             };
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
-
-            sampler2D _GrabTexture;
-            float4 _GrabTexture_ST;
+            float _Frequency;
+            float _Amplitude;
 
             v2f vert (appdata v)
             {
                 v2f o;
 
+                float wave = sin(v.vertex.x * _Frequency + _Time.y) * cos(v.vertex.z * _Frequency + _Time.y);
+                v.vertex.y += wave * _Amplitude;
+
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _GrabTexture);
-            
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // textura
-                fixed4 col = tex2D(_GrabTexture, i.uv);
-                
-                // 1 - inverter cores
-                // col = 1 - col;
-
-                // 2 - cores a preto e branco
-                col.xyz = float3((col.r + col.g + col.b) / 3, (col.r + col.g + col.b) / 3, (col.r + col.g + col.b) / 3);
-                
-                // 3 - tudo a vermelho
-                col.xyz = float3(col.r, 0, 0);
-
+                fixed4 col = tex2D(_MainTex, i.uv);
                 return col;
             }
             ENDCG

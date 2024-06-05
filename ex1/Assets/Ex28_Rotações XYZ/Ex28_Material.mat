@@ -7,11 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex26_PostProcessing_Material
-  m_Shader: {fileID: 4800000, guid: ac914300ec64c5e47af7e3fa02699c21, type: 3}
+  m_Name: Ex28_Material
+  m_Shader: {fileID: 4800000, guid: 82231b43139111443a7af7850b8e687b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ROTATIONSIDE_X
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -72,17 +73,14 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Slider: 60
-    - _Slider_rotation: 0
-    - _Slider_side: 170
-    - _Slider_x: 296
+    - _RotationSide: 0
+    - _SliderAngles: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 503.00003, g: 276.75, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

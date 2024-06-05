@@ -1,4 +1,4 @@
-Shader "Custom/Ex23_Color_SurfaceShader"
+Shader "Custom/Ex23_Color_UnlitShader"
 {
     Properties
     {
