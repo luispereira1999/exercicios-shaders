@@ -7,12 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ex25_PostProcessing_Material
-  m_Shader: {fileID: 4800000, guid: ec2876dfe91238b4f89b5e7ac61b08f0, type: 3}
+  m_Name: Ex36_Material
+  m_Shader: {fileID: 4800000, guid: 88c609decd5214a4ca11d41004270268, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _ROTATIONSIDE_X
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -62,26 +63,58 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
+    - _ChaosStrength: 0.219
     - _Cutoff: 0.5
+    - _Desaturation: 1.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FresnelPower: 0.94
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _IsLineSet: 0
+    - _IsPoint1: 0
+    - _IsPoint2: 0
+    - _IsTriangleSet: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Radius: 50
+    - _Rotation: 0
+    - _RotationSide: 0
+    - _Rotation_triangle: 197
+    - _Rotation_uvs: 245
+    - _Side: 456
+    - _Side_square: 100
     - _Slider: 60
-    - _Slider_side: 0.1
+    - _SliderAngles: 0
+    - _Slider_rotation: 3.21
+    - _Slider_side: 136
     - _Slider_x: 15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Stretch: 1.5
+    - _StretchFactor: 1.5
+    - _Stretch_factor: 1.5
+    - _Thickness: 0
+    - _Tolerance: 0.53
     - _UVSec: 0
+    - _VerticalLimit: 0.476
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 0.5584416, g: 0.6049323, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BorderColor: {r: 1, g: 0, b: 0, a: 1}
+    - _BottomColor: {r: 0.3961444, g: 0, b: 1, a: 1}
+    - _Center: {r: 547, g: 217.74997, b: 0, a: 0}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FillColor: {r: 0, g: 0, b: 1, a: 1}
+    - _FresnelColor: {r: 0.16323447, g: 1, b: 0, a: 1}
+    - _LineColor: {r: 1, g: 0, b: 0, a: 1}
+    - _PointA: {r: 386.00003, g: 122.74998, b: 0, a: 0}
+    - _PointB: {r: 751.00006, g: 145.74997, b: 0, a: 0}
+    - _ReplacedColor: {r: 1, g: 0, b: 0, a: 1}
+    - _SelectedColor: {r: 1, g: 0, b: 0, a: 1}
+    - _TopColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

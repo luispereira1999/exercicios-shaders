@@ -105,11 +105,11 @@ Material:
     - _Center: {r: 547, g: 217.74997, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FillColor: {r: 1, g: 0, b: 0.8242407, a: 1}
+    - _FillColor: {r: 0, g: 0, b: 1, a: 1}
     - _Fill_color: {r: 0.967649, g: 0, b: 1, a: 1}
     - _LineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _PointA: {r: 334, g: 423.75, b: 0, a: 0}
-    - _PointB: {r: 692.00006, g: 406.75, b: 0, a: 0}
+    - _PointA: {r: 278, g: 425.74997, b: 0, a: 0}
+    - _PointB: {r: 810, g: 441.75, b: 0, a: 0}
     - _ReplacedColor: {r: 1, g: 0, b: 0, a: 1}
     - _SelectedColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

@@ -39,7 +39,7 @@ Shader "Custom/Ex35_UnlitShader"
             };
 
             sampler2D _MainTex;
-            sampler2D _MainTex_ST;
+            float4 _MainTex_ST;;
 
             float4 _TopColor;
             float4 _BottomColor;
@@ -55,7 +55,7 @@ Shader "Custom/Ex35_UnlitShader"
                 v2f o;
 
                 // aplicar efeito caótico
-                if (v.uv.y > 0.5)
+                if (v.uv.y > _VerticalLimit)
                 {
                     float3 noise = float3(
                         frac(sin(dot(v.vertex.xy, float2(12.9898, 78.233))) * 43758.5453),
@@ -76,7 +76,7 @@ Shader "Custom/Ex35_UnlitShader"
             {
                 fixed4 textureColor = tex2D(_MainTex, i.uv);
 
-                if (i.uv.y > 0.5) {
+                if (i.uv.y > _VerticalLimit) {
                     // aplicar efeito fresnel
                     float3 viewDir = normalize(_WorldSpaceCameraPos - i.worldPos);
                     float fresnelFactor = pow(1.0 - dot(viewDir, i.worldNormal), _FresnelPower);

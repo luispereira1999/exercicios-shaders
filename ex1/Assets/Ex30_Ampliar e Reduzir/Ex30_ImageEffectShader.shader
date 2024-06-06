@@ -41,7 +41,7 @@ Shader "Custom/Ex30_ImageEffectShader"
             }
 
             sampler2D _MainTex;
-            sampler2D _MainTex_ST;
+            float4 _MainTex_ST;;
             float _Side;
             float2 _Center;
             float _Stretch_factor;

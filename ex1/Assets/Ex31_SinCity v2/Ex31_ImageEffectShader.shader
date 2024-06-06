@@ -46,7 +46,7 @@ Shader "Custom/Ex31_ImageEffectShader"
 
             sampler2D _MainTex;
 			float4 _MainTex_TexelSize;
-            sampler2D _MainTex_ST;
+            float4 _MainTex_ST;;
             float _Side;
             float2 _Center;
             float _Stretch_factor;

@@ -50,7 +50,7 @@ Shader "Custom/Ex34_ImageEffectShader"
             } 
 
             sampler2D _MainTex;
-            sampler2D _MainTex_ST;
+            float4 _MainTex_ST;;
             
             float2 _PointA;
             float2 _PointB;
